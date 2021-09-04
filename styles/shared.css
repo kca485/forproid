@@ -6,6 +6,14 @@
   display: none;
 }
 
+.subnav-edukasi {
+  display: none;
+}
+
+.navitem-edukasi:hover .subnav-edukasi {
+  display: block;
+}
+
 @media  screen and (max-width: 1279px) {
   .menu-button {
     display: inline-block;
