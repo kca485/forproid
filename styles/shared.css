@@ -1,0 +1,22 @@
+/* * {
+  border: 1px solid #dd0000;
+} */
+
+.menu-button {
+  display: none;
+}
+
+@media  screen and (max-width: 1279px) {
+  .menu-button {
+    display: inline-block;
+  }
+
+  .mainnav {
+    display: none;
+    color: green;
+  }
+
+  .mainnav.mainnav-small {
+    display: block;
+  }
+}
