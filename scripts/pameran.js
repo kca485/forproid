@@ -12,7 +12,7 @@ container3d.appendChild(renderer.domElement);
 
 camera.position.z = 3000;
 
-const ambiLight = new THREE.AmbientLight( 0xffffff ); // soft white light
+const ambiLight = new THREE.AmbientLight( 0xffffff );
 scene.add( ambiLight );
 
 const manager = new THREE.LoadingManager();
