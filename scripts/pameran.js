@@ -40,6 +40,7 @@ const interactionManager = new InteractionManager(
 const loader = new GLTFLoader(manager);
 loader.load('../assets/model/scene.glb', function(gltf) {
   interactionManager.add(gltf.scene);
+  console.log(gltf);
   gltf.scene.addEventListener('click', () => {
     console.log('Yey! Iso diklik!')
   });
