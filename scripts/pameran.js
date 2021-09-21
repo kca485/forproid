@@ -1,5 +1,6 @@
 import * as THREE from './lib/three.js';
 import { GLTFLoader } from './lib/GLTFLoader.js';
+import { DRACOLoader } from './lib/DRACOLoader.js';
 
 // bagian 3d
 const scene = new THREE.Scene();
@@ -32,7 +33,10 @@ manager.onError = function ( url ) {
 };
 
 const loader = new GLTFLoader(manager);
-loader.load('../assets/model/scene.glb', function(gltf) {
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath('./scripts/lib/draco/');
+loader.setDRACOLoader(dracoLoader);
+loader.load('../assets/model/packed.glb', function(gltf) {
   scene.add(gltf.scene);
   function animate() {
     requestAnimationFrame( animate );
