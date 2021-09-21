@@ -1,6 +1,7 @@
 import * as THREE from './lib/three.js';
 import { GLTFLoader } from './lib/GLTFLoader.js';
 import { DRACOLoader } from './lib/DRACOLoader.js';
+import { OrbitControls } from './lib/OrbitControls.js';
 
 // bagian 3d
 const scene = new THREE.Scene();
@@ -12,6 +13,11 @@ const container3d = document.getElementById('3d-container');
 container3d.appendChild(renderer.domElement);
 
 camera.position.set(0, 10, 40);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.enablePan = false;
+controls.maxPolarAngle = Math.PI / 2;
 
 const ambiLight = new THREE.AmbientLight( 0xffffff );
 scene.add( ambiLight );
