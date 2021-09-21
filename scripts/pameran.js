@@ -4,14 +4,14 @@ import { DRACOLoader } from './lib/DRACOLoader.js';
 
 // bagian 3d
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 5000);
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100);
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 const container3d = document.getElementById('3d-container');
 container3d.appendChild(renderer.domElement);
 
-camera.position.z = 3000;
+camera.position.set(0, 10, 40);
 
 const ambiLight = new THREE.AmbientLight( 0xffffff );
 scene.add( ambiLight );
