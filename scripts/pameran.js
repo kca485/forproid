@@ -36,9 +36,7 @@ loader.load('../assets/model/scene.glb', function(gltf) {
   scene.add(gltf.scene);
   function animate() {
     requestAnimationFrame( animate );
-    gltf.scene.rotation.y += 0.01;
     renderer.render(scene, camera);
-    // interactionManager.update();
   }
   animate();
 }, undefined, function(error) {
