@@ -1,7 +1,11 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+/* * {
   border: 1px solid #dd0000;
 }
-
+ */
 ul {
   list-style: none;
 }
@@ -9,6 +13,7 @@ ul {
 header {
   display: flex;
   justify-content: space-between;
+  z-index:999;
 }
 
 header .header-item {
@@ -94,4 +99,161 @@ ul.socmed a {
   ul.subnav-edukasi {
     position: static;
   }
+}
+
+/* THIS PART START PII */
+
+
+/* GENERAL STYLING */
+p,
+ul,
+small,
+span,
+div,
+a,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* FOOTER */
+footer {
+  background-image: url("https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2Ffooter-bg.png?v=1631786135165");
+  background-color: #EFE963;
+}
+
+footer .footer-container {
+  padding: 5rem 3rem 0rem;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .company-identity {
+  width: 300px;
+  font-size: 16px;
+  line-height: 150%;
+  color: #013832;
+}
+
+footer .copyright-container {
+  background-color: #094020;
+  color: #fff;
+  padding: 1rem 3rem 1rem;
+}
+
+footer .right-container{
+  display:flex;
+  position:relative;
+}
+
+footer .plant {
+  width:100px;
+  display:block;
+  position:relative;
+}
+
+footer .plant img{
+  width:120px;
+  height:auto;
+  position:absolute;
+  bottom:0;
+  left:0;
+}
+
+footer ul.socmed {
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+
+footer .socmed-container{
+  position:relative;
+}
+
+/* HEADER */
+
+header {
+  height:65px;
+  padding:0 3rem;
+}
+
+header a {
+  font-size:15px;
+  text-decoration:none;
+}
+
+header ul.socmed svg{
+  width:24px;
+}
+
+header ul.socmed{
+  width:60px;
+}
+
+/* GENERAL */
+
+h1 {
+  font-family: 'Prata', serif;
+  text-align:center;
+  font-size:64px;
+  letter-spacing:13px;
+  text-transform:lowercase;
+}
+
+h2 {
+  font-family: 'Prata', serif;
+  text-align:center;
+  font-size:32px;
+  letter-spacing:10px;
+  text-transform:lowercase;
+}
+
+main {
+  padding:10px 4rem;
+  line-height:150%;
+}
+
+.spoiler-container img{
+  width:100vw;
+  height:auto;
+}
+
+.fullheight.spoiler {
+  display:flex;
+  flex-direction:column;
+  background-image:url('https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2F3Dexpo.png?v=1631792007385');
+  position:relative;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+.fullheight.afternav {
+  display:flex;
+  flex-direction:column;
+  background-image:url('https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2FFrame%201.png?v=1631794643972');
+  position:relative;
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+.spoiler-ornament img{
+  width:calc(100vw - 15px);
+  height:auto;
+  display:inherit;
+  position:absolute;
+  bottom:0;
+}
+
+.spoiler-ornament {
+  width:auto;
+  height:auto;
+  display:inherit;
+  position:absolute;
+  bottom:0;
 }
