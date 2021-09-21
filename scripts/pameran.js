@@ -71,11 +71,11 @@ function onMouseClick(event) {
 
   raycaster.setFromCamera(mouse, camera);
   const gltfScene = scene.children[1];
-  const intersects = raycaster.intersectObjects(gltfScene.children, true);
+  const intersects = raycaster.intersectObjects(gltfScene.children);
   
   if ((intersects.length > 0) && !isModalShown) {
     const objectName = intersects[0].object.name;
-    const tenantModal = document.getElementById('OSG_Scene'); // hardcode 'OSG_Scene'' sementara aja, sekedar percobaan sambil nunggu model benerannya
+    const tenantModal = document.getElementById(objectName); // hardcode 'OSG_Scene'' sementara aja, sekedar percobaan sambil nunggu model benerannya
     if (tenantModal) {
       tenantModal.style.display = 'block';
       isModalShown = true;
