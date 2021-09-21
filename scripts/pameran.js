@@ -18,8 +18,11 @@ const controls = new OrbitControls(camera, renderer.domElement);
 controls.enablePan = false;
 controls.maxPolarAngle = Math.PI / 2;
 
-const ambiLight = new THREE.AmbientLight( 0xffffff );
-scene.add( ambiLight );
+const ambiLight = new THREE.AmbientLight(0xffffff, 1);
+scene.add(ambiLight);
+const directLight = new THREE.DirectionalLight(0xffffff, 2);
+directLight.position.set(1, 2, 1);
+scene.add(directLight);
 
 const manager = new THREE.LoadingManager();
 manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
@@ -69,12 +72,12 @@ function onMouseClick(event) {
   mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
 
   raycaster.setFromCamera(mouse, camera);
-  const gltfScene = scene.children[1];
+  const gltfScene = scene.children.find(el => el.name === 'Scene');
   const intersects = raycaster.intersectObjects(gltfScene.children, true);
   
   if ((intersects.length > 0) && !isModalShown) {
     const objectName = intersects[0].object.name;
-    const tenantModal = document.getElementById(objectName); // hardcode 'OSG_Scene'' sementara aja, sekedar percobaan sambil nunggu model benerannya
+    const tenantModal = document.getElementById(objectName);
     if (tenantModal) {
       tenantModal.style.display = 'block';
       isModalShown = true;
