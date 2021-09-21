@@ -15,7 +15,6 @@ container3d.appendChild(renderer.domElement);
 camera.position.set(0, 10, 40);
 
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
 controls.enablePan = false;
 controls.maxPolarAngle = Math.PI / 2;
 
@@ -71,7 +70,7 @@ function onMouseClick(event) {
 
   raycaster.setFromCamera(mouse, camera);
   const gltfScene = scene.children[1];
-  const intersects = raycaster.intersectObjects(gltfScene.children);
+  const intersects = raycaster.intersectObjects(gltfScene.children, true);
   
   if ((intersects.length > 0) && !isModalShown) {
     const objectName = intersects[0].object.name;
