@@ -30,6 +30,10 @@ header nav {
   align-items: center;
 }
 
+header nav a {
+  color: #013832;
+}
+
 ul.mainnav {
   display: flex;
   padding: 0;
@@ -43,6 +47,7 @@ ul.mainnav li {
 .menu-button {
   display: none;
   padding: 0;
+  border: none;
 }
 
 ul.subnav-edukasi {
@@ -61,9 +66,9 @@ ul.subnav-edukasi li {
 
 ul.socmed {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 0;
-  width: 80px;
+  width: 125.333px;
 }
 
 ul.socmed li {
@@ -73,6 +78,18 @@ ul.socmed li {
 ul.socmed a {
   display: flex;
   align-items:center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+header ul.socmed a {
+  background-color: #013832;
+}
+
+footer ul.socmed a {
+  background-color: #a90b0b;
 }
 
 @media  screen and (max-width: 1279px) {
@@ -88,8 +105,15 @@ ul.socmed a {
 
   ul.mainnav {
     display: none;
-    position: absolute;
-    top: 114px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    padding-top: 65px;
+    text-align: center;
   }
 
   ul.mainnav.mainnav-small {
@@ -187,14 +211,6 @@ header a {
   text-decoration:none;
 }
 
-header ul.socmed svg{
-  width:24px;
-}
-
-header ul.socmed{
-  width:60px;
-}
-
 /* GENERAL */
 
 h1 {
@@ -218,42 +234,22 @@ main {
   line-height:150%;
 }
 
-.spoiler-container img{
-  width:100vw;
-  height:auto;
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.fullheight.spoiler {
-  display:flex;
-  flex-direction:column;
-  background-image:url('https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2F3Dexpo.png?v=1631792007385');
-  position:relative;
-  background-repeat:no-repeat;
-  background-size:cover;
+/* Track */
+::-webkit-scrollbar-track {
+  background: #02c39a;
 }
 
-.fullheight.afternav {
-  display:flex;
-  flex-direction:column;
-  background-image:url('https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2FFrame%201.png?v=1631794643972');
-  position:relative;
-  background-attachment:fixed;
-  background-repeat:no-repeat;
-  background-size:cover;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffba08;
 }
 
-.spoiler-ornament img{
-  width:calc(100vw - 15px);
-  height:auto;
-  display:inherit;
-  position:absolute;
-  bottom:0;
-}
-
-.spoiler-ornament {
-  width:auto;
-  height:auto;
-  display:inherit;
-  position:absolute;
-  bottom:0;
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #cc5803;
 }

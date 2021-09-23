@@ -2,10 +2,6 @@ html, body {
   width: 100%;
 }
 
-#home-link {
-  position: absolute;
-}
-
 .loading {
   position: absolute;
   top: 0;
@@ -23,3 +19,237 @@ html, body {
   transform: translate(-50%, -50%);
   background-color: #ffffff;
 }
+
+.tenant-modal {
+  background:#fff;
+  padding:10px;
+  height:80vh;
+  width:40vw;
+  overflow:auto;
+}
+
+.tenant-modal .modal-footer{
+  height:350px;
+  width:calc(100% + 20px);
+  margin-left:-10px;
+  margin-bottom:-10px;
+    background-image:url('https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2FBG%20opsi%201dan2%20trnsprn.png?v=1631794416707');
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:bottom;
+}
+
+.tenant-modal .close-button{
+  float:right;
+}
+
+.tenant-modal p{
+  padding:1rem 10%;
+  line-height:150%;
+}
+
+.tenant-modal img{
+  padding:1rem 10%;
+  width:70%;
+  height:auto;
+}
+
+.ke-pasar{
+  margin-top:30px;
+}
+
+.modal-footer {
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  column-gap:10px;
+}
+
+#home-link {
+  position:absolute;
+  right:0;
+  background-color:#ffb627;
+  margin:2rem 2rem 10px 2rem;
+  padding:10px;
+  border-radius:5rem;
+  text-decoration:none;
+  font-size:14px;
+  text-transform:lowercase;
+  color:#231942;  
+  transition: background-color .3s ease-out;
+  -moz-transition: background-color .3s ease-out;
+  -webkit-transition: background-color .3s ease-out;
+  -o-transition: background-color .3s ease-out;
+}
+
+#home-link:hover{
+  color:#ffb627;
+  background-color:#e2711d;
+  transition: background-color .3s ease-out;
+  -moz-transition: background-color .3s ease-out;
+  -webkit-transition: background-color .3s ease-out;
+  -o-transition: background-color .3s ease-out;
+}
+
+#home-link:before{
+      font-family: "Font Awesome 5 Free";
+    speak: none;
+    font-style: normal;
+    font-weight: 900;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f015";
+    font-size: 19px;
+}
+
+.tenant-modal a{
+  text-decoration:none;
+}
+
+.ke-pasar {
+  width:70px;
+  border:none;
+  padding:7px;
+  color:white;
+  border-radius:7px;
+  position:relative;
+}
+
+.ke-pasar.kios{
+  background-color:#fb8500;  
+  transition: background-color .3s ease-out;
+  -moz-transition: background-color .3s ease-out;
+  -webkit-transition: background-color .3s ease-out;
+  -o-transition: background-color .3s ease-out;
+}
+
+.ke-pasar.ig{
+  background-color:#843b62;  
+  transition: background-color .3s ease-out;
+  -moz-transition: background-color .3s ease-out;
+  -webkit-transition: background-color .3s ease-out;
+  -o-transition: background-color .3s ease-out;
+}
+
+.ke-pasar.fb{
+  background-color:#233d4d;  
+  transition: background-color .3s ease-out;
+  -moz-transition: background-color .3s ease-out;
+  -webkit-transition: background-color .3s ease-out;
+  -o-transition: background-color .3s ease-out;
+}
+
+.ke-pasar.kios:hover{
+  background-color:#e85d04;  
+  transition: background-color .3s ease-out;
+  -moz-transition: background-color .3s ease-out;
+  -webkit-transition: background-color .3s ease-out;
+  -o-transition: background-color .3s ease-out;
+}
+
+.ke-pasar.ig:hover{
+  background-color:#4e148c;  
+  transition: background-color .3s ease-out;
+  -moz-transition: background-color .3s ease-out;
+  -webkit-transition: background-color .3s ease-out;
+  -o-transition: background-color .3s ease-out;
+}
+
+.ke-pasar.fb:hover{
+  background-color:#11151c;  
+  transition: background-color .3s ease-out;
+  -moz-transition: background-color .3s ease-out;
+  -webkit-transition: background-color .3s ease-out;
+  -o-transition: background-color .3s ease-out;
+}
+
+.kios:before{
+      font-family: "Font Awesome 5 Free";
+    speak: none;
+    font-style: normal;
+    font-weight: 900;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: white;
+    content: "\f54e";
+    font-size: 19px;
+  margin-left:24px;
+}
+
+.ig:before{
+      font-family: "Font Awesome 5 Brands";
+    speak: none;
+    font-style: normal;
+    font-weight: 900;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: white;
+    content: "\f16d";
+    font-size: 19px;
+  margin-left:28px;
+}
+
+.fb:before{
+      font-family: "Font Awesome 5 Brands";
+    speak: none;
+    font-style: normal;
+    font-weight: 900;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: white;
+    content: "\f09a";
+    font-size: 19px;
+  margin-left:28px;
+}
+
+.close-button {
+  width:40px;
+  height:40px;
+  background-color:#c95d63;
+  padding:10px;
+  border-radius:5rem;
+  text-decoration:none;
+  font-size:14px;
+  text-transform:lowercase;
+  color:#ffffff;  
+  transition: background-color .3s ease-out;
+  -moz-transition: background-color .3s ease-out;
+  -webkit-transition: background-color .3s ease-out;
+  -o-transition: background-color .3s ease-out;
+  border:none;
+}
+
+.close-button:hover{
+  color:#c95d63;
+  background-color:#710000;
+  transition: background-color .3s ease-out;
+  -moz-transition: background-color .3s ease-out;
+  -webkit-transition: background-color .3s ease-out;
+  -o-transition: background-color .3s ease-out;
+}
+
+.close-button:before{
+      font-family: "Font Awesome 5 Free";
+    speak: none;
+    font-style: normal;
+    font-weight: 900;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f00d";
+    font-size: 19px;
+}
+
+
+

@@ -1,0 +1,22 @@
+div.container {
+  display: flex;
+  justify-content: center;
+}
+
+div.container .left,
+div.container .right {
+  width: 400px;
+}
+
+div.container .left {
+  display: flex;
+  justify-content: center;
+}
+
+a.form-link {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #103c36;
+  padding: 0.5em;
+  border-radius: 5px;
+}

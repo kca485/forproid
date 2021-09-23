@@ -1,0 +1,71 @@
+#hiburan h1 {
+  position:absolute;
+  width:calc(100vw - 12px);
+  top:200px;
+}
+
+iframe {
+  width:calc(100vw - 10px);
+  height:100vh;
+}
+
+.countdown-section {
+  margin:40vh 0;
+}
+
+.countdown{
+  font-size:72px;
+  width:calc(100vw - 20px);
+  display:flex;
+  justify-content:center;
+  padding-bottom:50px;
+  text-align:center;
+  color:#233d4d;
+  position:relative;
+  
+}
+
+.countdown span {
+  width:100px;
+  background-color:#094020;
+  margin-left:10px;
+  margin-right:10px;
+  padding:7px 10px;
+  color:#ffffff;
+}
+
+#days:before{
+  content:'days';
+  position:absolute;
+  color:#094020;
+  top:110px;
+  margin-left:15px;
+  font-size:24px;
+}
+
+#hours:before{
+  content:'hours';
+  position:absolute;
+  color:#094020;
+  top:110px;
+  margin-left:10px;
+  font-size:24px;
+}
+
+#minutes:before{
+  content:'minutes';
+  position:absolute;
+  color:#094020;
+  top:110px;
+  margin-left:-5px;
+  font-size:24px;
+}
+
+#seconds:before{
+  content:'seconds';
+  position:absolute;
+  color:#094020;
+  top:110px;
+  margin-left:-5px;
+  font-size:24px;
+}
