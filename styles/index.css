@@ -15,3 +15,63 @@ ul.sponsor-list {
   flex-wrap: nowrap;
 }
 
+.spoiler-container img{
+  width:100vw;
+  height:auto;
+}
+
+.fullheight.spoiler {
+  display:flex;
+  flex-direction:column;
+/*   background-image:url('https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2F3Dexpo.png?v=1631792007385'); */
+  position:relative;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+.fullheight.afternav {
+  display:flex;
+  flex-direction:column;
+  background-image:url('https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2FFrame%201.png?v=1631794643972');
+  position:relative;
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+.spoiler-ornament img{
+  width:calc(100vw - 15px);
+  height:auto;
+  display:inherit;
+  position:absolute;
+  bottom:0;
+}
+
+.spoiler-ornament {
+  width:auto;
+  height:auto;
+  display:inherit;
+  position:absolute;
+  top:0;
+}
+
+#myVideo {
+  right: 0;
+  top: 0;
+  width: calc(100vw - 10px);
+  z-index:-100;
+  filter:blur(8px);
+}
+
+.spoiler h2 {
+  position:absolute;
+  width:calc(100vw - 12px);
+  top:200px;
+  font-size:72px;
+  text-transform:none;
+  color:#fffb46;
+}
+
+#detach-button-host {
+    display: none !important;
+}

@@ -12,17 +12,29 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 const container3d = document.getElementById('3d-container');
 container3d.appendChild(renderer.domElement);
 
-camera.position.set(0, 10, 40);
+camera.position.set(-15, 8, 10);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enablePan = false;
-controls.maxPolarAngle = Math.PI / 2;
+controls.maxPolarAngle = Math.PI / 2.2;
+controls.autoRotate = true;
+controls.autoRotateSpeed = 0.3;
+controls.enableDamping = true;
 
-const ambiLight = new THREE.AmbientLight(0xffffff, 1);
-scene.add(ambiLight);
+renderer.toneMapping = THREE.ReinhardToneMapping;
+renderer.toneMappingExposure = 0.7;
+renderer.shadowMap.enabled = true
+renderer.gammaOutput = true
+renderer.shadowMap.enabled = true
+
+
 const directLight = new THREE.DirectionalLight(0xffffff, 2);
-directLight.position.set(1, 2, 1);
+directLight.position.set(2, 3, 3);
 scene.add(directLight);
+const hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 2);
+scene.add(hemiLight);
+
+scene.background = new THREE.Color( 0xcaf0f8 );
 
 const manager = new THREE.LoadingManager();
 manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
@@ -46,8 +58,31 @@ dracoLoader.setDecoderPath('./scripts/lib/draco/');
 loader.setDRACOLoader(dracoLoader);
 loader.load('../assets/model/packed.glb', function(gltf) {
   scene.add(gltf.scene);
+
+  let intersected;
+
   function animate() {
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObjects(gltf.scene.children, true);
+    if (intersects.length > 0) {
+      if (intersected !== intersects[0].object) {
+        if (intersected) intersected.material.emissive.setHex(intersected.originalHex);
+        intersected = intersects[0].object;
+        intersected.originalHex = intersected.material.emissive.getHex();
+
+        if (intersected.name.startsWith('Booth')) {
+          intersected.material = intersected.material.clone();
+          intersected.material.emissiveIntensity = 0.7;
+          intersected.material.emissive.setHex(0xffffff);
+        }
+      }
+    } else {
+      if (intersected) intersected.material.emissive.setHex(intersected.originalHex);
+      intersected = null;
+    }
+
     requestAnimationFrame( animate );
+    controls.update();
     renderer.render(scene, camera);
   }
   animate();
@@ -62,19 +97,26 @@ window.onresize = function() {
   renderer.setSize(window.innerWidth, window.innerHeight);
 };
 
-// bagian ngurusi munculin/sembunyiin tenant-modal
+
+
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
-let isModalShown = false
 
+function onMouseMove() {
+  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+  mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+}
+window.addEventListener('mousemove', onMouseMove);
+
+// ngurusi munculin/sembunyiin tenant-modal
+let isModalShown = false
 function onMouseClick(event) {
   mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
   mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
-
   raycaster.setFromCamera(mouse, camera);
+
   const gltfScene = scene.children.find(el => el.name === 'Scene');
   const intersects = raycaster.intersectObjects(gltfScene.children, true);
-  
   if ((intersects.length > 0) && !isModalShown) {
     const objectName = intersects[0].object.name;
     const tenantModal = document.getElementById(objectName);

@@ -1,3 +1,22 @@
+dl.faq {
+  margin: 4rem 10%;
+}
+
+dl.faq .qa-set {
+  margin: 2rem 0;
+}
+
+dl.faq dt button {
+  width: 100%;
+  text-align: left;
+  background-color: #cedbe0;
+  border: none;
+}
+
+dl.faq dd {
+  margin: 0;
+}
+
 dl.faq .answer {
   display: none;
 }
