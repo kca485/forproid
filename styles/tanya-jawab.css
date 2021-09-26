@@ -1,5 +1,27 @@
+main {
+	background-image: url('../assets/bg-opsi-3-kecil-trnsprn.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: bottom;
+	padding-bottom: 10%;
+}
+
+h1 {
+  text-transform: unset;
+  color: #013832;
+  margin: 0;
+  font-weight: normal;
+  margin: 6rem 0;
+}
+
+h1 abbr[title] {
+  line-height: 1.15;
+  font-size: 72px;
+}
+
 dl.faq {
-  margin: 4rem 10%;
+  margin: 4rem auto;
+  max-width: 800px;
 }
 
 dl.faq .qa-set {
@@ -7,16 +29,39 @@ dl.faq .qa-set {
 }
 
 dl.faq dt button {
+  min-height: 40px;
   width: 100%;
   text-align: left;
   background-color: #cedbe0;
+  background-image: url(../assets/plus.svg);
+  background-repeat: no-repeat;
+  background-position: left 1rem center;
   border: none;
+  padding: 1em 4rem;
+  line-height: 150%;
 }
 
 dl.faq dd {
   margin: 0;
+  padding: 0 4rem;
 }
 
 dl.faq .answer {
   display: none;
+}
+
+@media  screen and (max-width: 480px) {
+  h1 abbr[title] {
+    font-size: 56px;
+  }
+
+  dl.faq dt button {
+    background-image: url(../assets/plus.svg);
+    background-position: bottom 1rem center;
+    padding: 2rem 1em 3rem 1em;
+  }
+
+  dl.faq dd {
+    padding: 0 1rem;
+  }
 }

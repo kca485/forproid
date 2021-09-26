@@ -1,3 +1,37 @@
+h2, h3 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 72px;
+  font-weight: normal;
+  margin: 6rem 0;
+}
+
+article#webinar {
+	min-height: calc(100vh - 65px);
+	background-image: url('../assets/footer2.png');
+	background-repeat: no-repeat;
+	background-position: bottom left;
+  background-color: #50c5b7;
+  display: flex;
+  flex-direction: column;
+}
+
+article#webinar h2 {
+  color: #a90b0b;
+}
+
+article#workshop {
+	background-image: url('../assets/footer2.png');
+	background-repeat: no-repeat;
+	background-position: bottom right;
+}
+
+article#workshop  h3 {
+  color: #013832;
+}
+
 div.container {
   display: flex;
   justify-content: center;
@@ -5,7 +39,7 @@ div.container {
 
 div.container .left,
 div.container .right {
-  width: 400px;
+  width: 350px;
 }
 
 div.container .left {
@@ -13,10 +47,44 @@ div.container .left {
   justify-content: center;
 }
 
+div.container .left img {
+  margin: 2.5rem 0;
+}
+
+div.container .right {
+  margin-bottom: 6rem;
+}
+
 a.form-link {
   text-decoration: none;
   color: #ffffff;
   background-color: #103c36;
-  padding: 0.5em;
-  border-radius: 5px;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+@media  screen and (max-width: 768px) {
+  h2 {
+    margin-bottom: 2.5rem;
+  }
+
+  div.container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  div.container .left img {
+    margin-top: 0;
+  }
+}
+
+@media  screen and (max-width: 480px) {
+  h2 {
+    font-size: 56px;
+  }
 }

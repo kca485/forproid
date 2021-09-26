@@ -3,7 +3,7 @@
 }
 
 .fullheight.afternav {
-  height: calc(100vh - 1px);
+  height: calc(100vh - 65px);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,7 +12,10 @@
 
 ul.sponsor-list {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 0;
+  margin: 0;
 }
 
 .spoiler-container img{
@@ -23,10 +26,12 @@ ul.sponsor-list {
 .fullheight.spoiler {
   display:flex;
   flex-direction:column;
+  align-items:center;
 /*   background-image:url('https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2F3Dexpo.png?v=1631792007385'); */
   position:relative;
   background-repeat:no-repeat;
   background-size:cover;
+  overflow: hidden;
 }
 
 .fullheight.afternav {
@@ -56,9 +61,7 @@ ul.sponsor-list {
 }
 
 #myVideo {
-  right: 0;
-  top: 0;
-  width: calc(100vw - 10px);
+  height:100%;
   z-index:-100;
   filter:blur(8px);
 }
