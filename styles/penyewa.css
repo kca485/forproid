@@ -1,0 +1,72 @@
+div.tenant,
+div.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+h1, h2 {
+  margin: 0;
+  text-align: left;
+  font-weight: normal;
+  font-size: 32px;
+}
+
+div.tenant {
+  min-height: calc(100vh - 65px);
+  background-image: url('../assets/bg-opsi-3-kecil-trnsprn.png');
+}
+
+div.tenant .tenant-info {
+  max-width: 350px;
+}
+
+div.products {
+  min-height: 100vh;
+  background-image: url('../assets/bg-opsi-3-kecil-trnsprn.png');
+}
+
+div.products .products-images,
+div.products .products-info{
+  max-width: 350px;
+}
+
+div.tenant .tenant-info,
+div.products .products-info {
+  padding-bottom: 10%;
+}
+
+div#image-list {
+  display: flex;
+}
+
+div#image-list input[type="radio"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+div.image-chosen {
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+div.product {
+  display: none;
+}
+
+@media  screen and (max-width: 768px) {
+  div.tenant,
+  div.products {
+    flex-direction: column;
+  }
+
+  h1, h2,  {
+    text-align: center;
+  }
+}

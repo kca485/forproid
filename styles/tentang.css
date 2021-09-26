@@ -1,0 +1,29 @@
+div.tentang {
+  min-height: 100vh;
+  background-color: #25133a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+div.tentang .forpro-image {
+  text-align: right;
+}
+
+h1 {
+  font-size: 72px;
+  font-weight: normal;
+  line-height: 1.15;
+  margin: 0;
+}
+
+h2 {
+  text-transform: none;
+  color: #013832;
+}
+
+@media  screen and (max-width: 480px) {
+  h1 {
+    font-size: 56px;
+  }
+}

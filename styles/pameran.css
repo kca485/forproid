@@ -26,6 +26,8 @@ html, body {
   height:80vh;
   width:40vw;
   overflow:auto;
+  min-width: 300px;
+  max-width: 600px;
 }
 
 .tenant-modal .modal-footer{

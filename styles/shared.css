@@ -32,6 +32,7 @@ header nav {
 
 header nav a {
   color: #013832;
+  z-index: 1;
 }
 
 ul.mainnav {
@@ -42,6 +43,7 @@ ul.mainnav {
 
 ul.mainnav li {
   margin: auto 1em;
+  white-space: nowrap;
 }
 
 .menu-button {
@@ -50,17 +52,32 @@ ul.mainnav li {
   border: none;
 }
 
+.navitem-edukasi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 ul.subnav-edukasi {
   display: none;
   position:absolute;
-  padding: 0;
+  padding: 40px 1em 0 1em;
+  background-color: #ffffff;
 }
 
 ul.subnav-edukasi li {
   margin: auto;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navitem-edukasi:hover .subnav-edukasi {
+  display: block;
+}
+
+.subnav-edukasi:hover {
   display: block;
 }
 
@@ -92,10 +109,19 @@ footer ul.socmed a {
   background-color: #a90b0b;
 }
 
-@media  screen and (max-width: 1279px) {
+abbr[title] {
+  text-decoration: none;
+}
+
+@media  screen and (max-width: 1024px) {
   header nav {
     flex-direction: column;
     justify-content: center;
+  }
+  
+  nav {
+    position:absolute;
+    right:20px;
   }
 
   .menu-button {
@@ -108,8 +134,8 @@ footer ul.socmed a {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(255, 255, 255, 0.8);
-    height: 100vh;
+    background-color: #ffffff;
+    height: calc(100vh - 65px);
     width: 100%;
     z-index: 1;
     padding-top: 65px;
@@ -117,11 +143,32 @@ footer ul.socmed a {
   }
 
   ul.mainnav.mainnav-small {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  
+  ul.mainnav.mainnav-small li {
+    margin: 1em;
   }
 
   ul.subnav-edukasi {
     position: static;
+    padding-top: 0;
+  }
+
+  ul.subnav-edukasi li {
+    height: 1em;
+  }
+}
+
+@media  screen and (max-width: 480px) {
+  footer .footer-container {
+    flex-direction: column;
+  }
+
+  footer .right-container{
+    justify-content: right;
   }
 }
 
@@ -152,7 +199,7 @@ footer {
 
 footer .footer-container {
   padding: 5rem 3rem 0rem;
-  height: 200px;
+  min-height: 200px;
   display: flex;
   justify-content: space-between;
 }
@@ -172,31 +219,17 @@ footer .copyright-container {
 
 footer .right-container{
   display:flex;
-  position:relative;
+  align-items:flex-end;
 }
 
 footer .plant {
   width:100px;
-  display:block;
-  position:relative;
+  display:flex;
 }
 
 footer .plant img{
   width:120px;
   height:auto;
-  position:absolute;
-  bottom:0;
-  left:0;
-}
-
-footer ul.socmed {
-  position:absolute;
-  bottom:0;
-  right:0;
-}
-
-footer .socmed-container{
-  position:relative;
 }
 
 /* HEADER */
@@ -230,7 +263,7 @@ h2 {
 }
 
 main {
-  padding:10px 4rem;
+  padding:0 4rem;
   line-height:150%;
 }
 

@@ -5,12 +5,20 @@
 }
 
 iframe {
-  width:calc(100vw - 10px);
-  height:100vh;
+  width:100%;
+  height: calc(100vh - 65px);
 }
 
 .countdown-section {
-  margin:40vh 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.countdown-section h2 {
+  margin-top: 0;
+  color: #013832;
 }
 
 .countdown{
@@ -18,54 +26,79 @@ iframe {
   width:calc(100vw - 20px);
   display:flex;
   justify-content:center;
-  padding-bottom:50px;
   text-align:center;
   color:#233d4d;
   position:relative;
-  
 }
 
-.countdown span {
+.number-unit-pair {
+  display: flex;
+  flex-direction: column;
+}
+
+.countdown span.number {
   width:100px;
   background-color:#094020;
-  margin-left:10px;
-  margin-right:10px;
+  margin: 0 20px;
   padding:7px 10px;
   color:#ffffff;
 }
 
-#days:before{
-  content:'days';
-  position:absolute;
-  color:#094020;
-  top:110px;
-  margin-left:15px;
-  font-size:24px;
-}
-
 #hours:before{
-  content:'hours';
-  position:absolute;
-  color:#094020;
-  top:110px;
-  margin-left:10px;
-  font-size:24px;
+  content:':';
+  color: #094020;
+  font-size:72px;
+  position: absolute;
+  left: calc(50% - 180px);
 }
 
 #minutes:before{
-  content:'minutes';
-  position:absolute;
-  color:#094020;
-  top:110px;
-  margin-left:-5px;
-  font-size:24px;
+  content:':';
+  color: #094020;
+  font-size:72px;
+  position: absolute;
+  left: calc(50% - 20px);
 }
 
 #seconds:before{
-  content:'seconds';
-  position:absolute;
-  color:#094020;
-  top:110px;
-  margin-left:-5px;
-  font-size:24px;
+  content:':';
+  color: #094020;
+  font-size:72px;
+  position: absolute;
+  left: calc(50% + 140px);
+}
+
+.unit {
+  font-size: 24px;
+  padding-top: 12px;
+}
+
+@media  screen and (max-width: 640px) {
+  .countdown {
+    flex-direction: column-reverse;
+    margin: 12px;
+  }
+
+  .number-unit-pair {
+    flex-direction: row;
+    justify-content: center;
+    margin: 12px;
+  }
+
+  #hours::before{
+    display: none;
+  }
+
+  #minutes::before{
+    display: none;
+  }
+
+  #seconds::before{
+    display: none;
+  }
+
+  .unit {
+    width: 100px;
+    text-align: left;
+  }
 }

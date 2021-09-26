@@ -79,7 +79,7 @@ CountDown.prototype.hasPassed = function() {
   }
 };
 
-const targetDate = new Date('16 October 2021 00:00 GMT+07:00');
+const targetDate = new Date('8 November 2021 10:00 UTC+07:00');
 const countDown = new CountDown(targetDate);
 countDown.setSecondsElement('seconds');
 countDown.setMinutesElement('minutes');

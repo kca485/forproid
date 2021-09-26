@@ -18,7 +18,7 @@ const controls = new OrbitControls(camera, renderer.domElement);
 controls.enablePan = false;
 controls.maxPolarAngle = Math.PI / 2.2;
 controls.autoRotate = true;
-controls.autoRotateSpeed = 0.3;
+controls.autoRotateSpeed = 0.2;
 controls.enableDamping = true;
 
 renderer.toneMapping = THREE.ReinhardToneMapping;
@@ -40,9 +40,13 @@ const manager = new THREE.LoadingManager();
 manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
   console.log( 'Started loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
 };
-manager.onLoad = function ( ) {
+manager.onLoad = function () {
   const loadingScreen = document.getElementById('loading-screen');
-  loadingScreen.classList.remove('loading');
+  loadingScreen.style.opacity = 0;
+  loadingScreen.style.transition = 'opacity 1.5s'
+  setTimeout(() => {
+    loadingScreen.style.display = 'none';
+  }, 2000);
   console.log( 'Loading complete!');
 };
 manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
@@ -57,11 +61,24 @@ const dracoLoader = new DRACOLoader();
 dracoLoader.setDecoderPath('./scripts/lib/draco/');
 loader.setDRACOLoader(dracoLoader);
 loader.load('../assets/model/packed.glb', function(gltf) {
+  let isFirstRender = true;
   scene.add(gltf.scene);
+
+  const mixer = new THREE.AnimationMixer(gltf.scene);
+  gltf.animations.forEach((clip) => {
+    mixer.clipAction(clip).play();
+  });
+
+  const clock = new THREE.Clock();
 
   let intersected;
 
   function animate() {
+    if (isFirstRender) {
+      mouse.x = -1;
+      mouse.y = 1;
+      isFirstRender = false;
+    }
     raycaster.setFromCamera(mouse, camera);
     const intersects = raycaster.intersectObjects(gltf.scene.children, true);
     if (intersects.length > 0) {
@@ -80,6 +97,9 @@ loader.load('../assets/model/packed.glb', function(gltf) {
       if (intersected) intersected.material.emissive.setHex(intersected.originalHex);
       intersected = null;
     }
+
+    const delta = clock.getDelta();
+    mixer.update(delta);
 
     requestAnimationFrame( animate );
     controls.update();
