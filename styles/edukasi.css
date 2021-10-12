@@ -8,6 +8,10 @@ h2 {
   margin: 6rem 0;
 }
 
+h3 time {
+  line-height: 39px;
+}
+
 article#webinar {
 	min-height: calc(100vh - 65px);
 	background-image: url('../assets/footer2.png');
@@ -65,6 +69,10 @@ a.form-link {
   margin-top: 1rem;
   border-radius: 10px;
   display: inline-block;
+}
+
+#webinar p, #webinar h3, #workshop p, #webinar h3{
+  line-height:150%;
 }
 
 @media  screen and (max-width: 768px) {

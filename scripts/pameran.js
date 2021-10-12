@@ -129,7 +129,7 @@ function onMouseMove() {
 window.addEventListener('mousemove', onMouseMove);
 
 // ngurusi munculin/sembunyiin tenant-modal
-let isModalShown = false
+let modalShown = null;
 function onMouseClick(event) {
   mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
   mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
@@ -137,13 +137,18 @@ function onMouseClick(event) {
 
   const gltfScene = scene.children.find(el => el.name === 'Scene');
   const intersects = raycaster.intersectObjects(gltfScene.children, true);
-  if ((intersects.length > 0) && !isModalShown) {
+  if ((intersects.length > 0) && !modalShown) {
     const objectName = intersects[0].object.name;
     const tenantModal = document.getElementById(objectName);
     if (tenantModal) {
       tenantModal.style.display = 'block';
-      isModalShown = true;
+      modalShown = tenantModal;
+      return;
     }
+  }
+  if (modalShown) {
+    modalShown.style.display = 'none';
+    modalShown = null
   }
 }
 window.addEventListener('click', onMouseClick);
@@ -153,6 +158,6 @@ tenantInfo.addEventListener('click', (event) => {
   event.stopPropagation();
   if (event.target.className.includes('close-button')) {
     event.target.parentElement.style.display = 'none';
-    isModalShown = false;
+    modalShown = null;
   }
 });

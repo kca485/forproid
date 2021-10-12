@@ -1,19 +1,70 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,700;1,700&display=swap');
 
-/* * {
-  border: 1px solid #dd0000;
+/* GENERAL */
+
+p,
+ul,
+small,
+span,
+div,
+a,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
- */
+
+h1 {
+  font-family: 'Prata', serif;
+  text-align:center;
+  font-size:64px;
+  letter-spacing:13px;
+  text-transform:lowercase;
+}
+
+h2 {
+  font-family: 'Prata', serif;
+  text-align:center;
+  font-size:32px;
+  letter-spacing:10px;
+  text-transform:lowercase;
+}
+
+main {
+  padding:0 4rem;
+  line-height:150%;
+}
+
 ul {
   list-style: none;
 }
 
+abbr[title] {
+  text-decoration: none;
+}
+
+
+/* HEADER */
+
 header {
   display: flex;
   justify-content: space-between;
-  z-index:999;
+  height:65px;
+  padding:0 3rem;
+  max-width:1200px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+header a {
+  font-size:15px;
+  text-decoration:none;
 }
 
 header .header-item {
@@ -61,7 +112,7 @@ ul.mainnav li {
 ul.subnav-edukasi {
   display: none;
   position:absolute;
-  padding: 40px 1em 0 1em;
+  padding: 40px 0.5em 0 0.5em;
   background-color: #ffffff;
 }
 
@@ -80,6 +131,13 @@ ul.subnav-edukasi li {
 .subnav-edukasi:hover {
   display: block;
 }
+
+header ul.socmed a {
+  background-color: #013832;
+}
+
+
+/* HEADER & FOOTER */
 
 ul.socmed {
   display: flex;
@@ -101,25 +159,81 @@ ul.socmed a {
   border-radius: 50%;
 }
 
-header ul.socmed a {
-  background-color: #013832;
+
+/* FOOTER */
+
+footer {
+  background-image: url("https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2Ffooter-bg.png?v=1631786135165");
+  background-color: #EFE963;
+}
+
+footer .footer-container {
+  padding: 5rem 3rem 1rem;
+  min-height: 200px;
+  display: flex;
+  justify-content: space-between;
+  background-image: url('../assets/footer2.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+footer .company-identity {
+  font-size: 16px;
+  line-height: 150%;
+  color: #013832;
+}
+
+footer .copyright-container {
+  background-color: #094020;
+  color: #fff;
+  padding: 1rem 3rem 1rem;
+}
+
+footer .right-container{
+  display:flex;
+  align-items:flex-end;
 }
 
 footer ul.socmed a {
   background-color: #a90b0b;
 }
 
-abbr[title] {
-  text-decoration: none;
+footer .plant {
+  width:100px;
+  display:flex;
 }
+
+footer .plant img{
+  width:120px;
+  height:auto;
+}
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #02c39a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffba08;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cc5803;
+}
+
+
+/* MEDIA QUERIES */
 
 @media  screen and (max-width: 1024px) {
   header nav {
     flex-direction: column;
     justify-content: center;
-  }
-  
-  nav {
     position:absolute;
     right:20px;
   }
@@ -146,6 +260,7 @@ abbr[title] {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    z-index: 2;
   }
   
   ul.mainnav.mainnav-small li {
@@ -155,6 +270,10 @@ abbr[title] {
   ul.subnav-edukasi {
     position: static;
     padding-top: 0;
+  }
+
+  .navitem-edukasi:hover .subnav-edukasi {
+	  display: none;
   }
 
   ul.subnav-edukasi li {
@@ -169,120 +288,10 @@ abbr[title] {
 
   footer .right-container{
     justify-content: right;
+    height: 100px
   }
-}
 
-/* THIS PART START PII */
-
-
-/* GENERAL STYLING */
-p,
-ul,
-small,
-span,
-div,
-a,
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Montserrat", sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* FOOTER */
-footer {
-  background-image: url("https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2Ffooter-bg.png?v=1631786135165");
-  background-color: #EFE963;
-}
-
-footer .footer-container {
-  padding: 5rem 3rem 0rem;
-  min-height: 200px;
-  display: flex;
-  justify-content: space-between;
-}
-
-footer .company-identity {
-  width: 300px;
-  font-size: 16px;
-  line-height: 150%;
-  color: #013832;
-}
-
-footer .copyright-container {
-  background-color: #094020;
-  color: #fff;
-  padding: 1rem 3rem 1rem;
-}
-
-footer .right-container{
-  display:flex;
-  align-items:flex-end;
-}
-
-footer .plant {
-  width:100px;
-  display:flex;
-}
-
-footer .plant img{
-  width:120px;
-  height:auto;
-}
-
-/* HEADER */
-
-header {
-  height:65px;
-  padding:0 3rem;
-}
-
-header a {
-  font-size:15px;
-  text-decoration:none;
-}
-
-/* GENERAL */
-
-h1 {
-  font-family: 'Prata', serif;
-  text-align:center;
-  font-size:64px;
-  letter-spacing:13px;
-  text-transform:lowercase;
-}
-
-h2 {
-  font-family: 'Prata', serif;
-  text-align:center;
-  font-size:32px;
-  letter-spacing:10px;
-  text-transform:lowercase;
-}
-
-main {
-  padding:0 4rem;
-  line-height:150%;
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #02c39a;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #ffba08;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #cc5803;
+  div.copyright-container small {
+    font-size: 11px;
+  }
 }

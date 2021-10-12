@@ -1,18 +1,82 @@
-div.hero {
-  min-height: calc(100vh - 65px);
-  background-color: #72ccbc;
+body {
+  background-color:#f4f1de;
 }
 
-h1 {
-  padding: 6rem 0;
-  margin: 0;
+div.hero {
+  min-height: calc(100vh - 65px);
+  background-image:url('https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2FSlider3.png?v=1632851700335');
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+div.hero h1 {
+  padding: 3rem 0 0 0;
+  margin: 0 auto 0 15rem;
+  text-align:left;
+  line-height:150%;
+  color:#023047;
   font-size: 72px;
   font-weight: normal;
-  color: #f0f465;
+}
+
+div.hero p {
+  width:40vw;
+  margin-left:15rem;
+  margin-right:auto;
+  line-height:150%;
+}
+
+h2 {
+  margin-top: 4em;
+}
+
+ul.produk-list {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  column-gap:20px;
+  margin-left:auto;
+  margin-right:auto;
+  width:90%;
+  text-align:center;
+  padding: 0;
+}
+
+ul.produk-list img{
+  padding-top:20px;
+}
+
+ul.produk-list a{
+  height:300px;
+  width:300px;
+}
+
+@media  screen and (min-width: 1025px) {
+  ul.subnav-edukasi {
+      background-color: #f4f1de;
+  }
+}
+
+@media  screen and (max-width: 851px) {
+  ul.produk-list {
+    grid-template-columns: 1fr;
+  }
+
+  div.hero h1 {
+    margin: 0;
+    text-align: center;
+  }
+
+  div.hero p {
+    margin: 1em auto;
+    width: unset;
+    text-align: center;
+  }
 }
 
 @media  screen and (max-width: 480px) {
-  h1 {
+  div.hero h1 {
     font-size: 56px;
   }
 }
