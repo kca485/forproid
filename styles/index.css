@@ -1,5 +1,47 @@
+header {
+  position: relative;
+  z-index: 2;
+}
+
+.swiper {
+  margin-top:-65px;
+  height:calc(100vh - 10px);
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:3rem;
+}
+
+.swiper-slide.slide-1 {
+  background-image:url('https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2FFrame%201.png?v=1631794643972');
+  /* background-attachment:fixed; */
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+.swiper-slide.slide-2 {
+  background-image:url('https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2FSlider3.png?v=1632851700335');
+  /* background-attachment:fixed; */
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+.swiper-slide.slide-3 {
+  background-image:url('https://cdn.glitch.com/621851f0-36e0-4eef-abb8-a9a0bcc36aaa%2FFrame%201-min.png?v=1632985715507');
+  /* background-attachment:fixed; */
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
 .fullheight {
   height: 100vh;
+}
+
+.fullheight h2 {
+  margin: 0;
 }
 
 .fullheight.afternav {
@@ -8,14 +50,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   z-index:-999;
-}
-
-ul.sponsor-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-left: 0;
-  margin: 0;
 }
 
 .spoiler-container img{
@@ -27,54 +61,94 @@ ul.sponsor-list {
   display:flex;
   flex-direction:column;
   align-items:center;
-/*   background-image:url('https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2F3Dexpo.png?v=1631792007385'); */
   position:relative;
-  background-repeat:no-repeat;
-  background-size:cover;
   overflow: hidden;
 }
 
-.fullheight.afternav {
-  display:flex;
-  flex-direction:column;
-  background-image:url('https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2FFrame%201.png?v=1631794643972');
-  position:relative;
-  background-attachment:fixed;
-  background-repeat:no-repeat;
-  background-size:cover;
-}
-
-.spoiler-ornament img{
-  width:calc(100vw - 15px);
-  height:auto;
-  display:inherit;
-  position:absolute;
-  bottom:0;
-}
-
-.spoiler-ornament {
-  width:auto;
-  height:auto;
-  display:inherit;
-  position:absolute;
-  top:0;
+.fullheight.spoiler h2 {
+  font-family:'DM Serif Display';
+  font-weight:normal;
 }
 
 #myVideo {
-  height:100%;
+  height:100vh;
+  width:100%;
+  object-fit:cover;
   z-index:-100;
   filter:blur(8px);
 }
 
 .spoiler h2 {
   position:absolute;
-  width:calc(100vw - 12px);
-  top:200px;
-  font-size:72px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:56px;
   text-transform:none;
   color:#fffb46;
 }
 
-#detach-button-host {
-    display: none !important;
+.fullheight.sponsor{
+  background-color:#f4f1de;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fullheight.sponsor h2 {
+  padding-bottom:30px;
+}
+
+ul.sponsor-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  column-gap:20px;
+  padding-left:10vw;
+  padding-right:10vw;
+}
+
+ul.sponsor-list img{
+  padding-top:20px;
+}
+
+img.timeline {
+  width:calc(80vw);
+  height:auto;
+  object-fit:contain;
+  margin-right:auto;
+  margin-left:auto;
+  padding:3rem 0px;
+  margin-bottom:3rem;
+}
+
+.fullheight.linimasa h2{
+  padding-top:10vh;
+}
+
+.fullheight.linimasa {
+  width:calc(100vw - 10px);
+  height:calc(120vh);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.fullheight.spoiler h2 {
+    font-family: "Noto Sans Display", sans-serif;
+  font-weight:bolder;
+  font-style:italic;
+  letter-spacing:normal;
+}
+
+@media  screen and (min-width: 1025px) {
+  ul.subnav-edukasi {
+      background-color: transparent;
+  }
+}
+
+@media  screen and (max-width: 480px) {
+  .spoiler h2 {
+    font-size: 48px;
+  }
 }

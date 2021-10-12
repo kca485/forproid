@@ -9,6 +9,7 @@
 
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="./styles/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/lib/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="./styles/shared.css" />
     <link rel="stylesheet" type="text/css" href="./styles/index.css" />
   </head>
@@ -38,21 +39,35 @@
           </svg>
         </button>
         <ul class="mainnav">
-          <li><a href="./" lang="en">Home</a></li>
-          <li><a href="./tentang.html">About</a></li>
-          <li><a href="./pameran.html" lang="en">3D Expo</a></li>
-          <li><a href="./pasar.html" lang="en">Creative Market</a></li>
+          <li><a href="/" lang="en">Home</a></li>
+          <li><a href="/tentang.html">About</a></li>
+          <li>
+            <a href="/pameran.html"
+              ><abbr title="Kembara Maha Taman">Mahatma</abbr></a
+            >
+          </li>
+          <li>
+            <a href="/pasar.html"
+              ><abbr title="Pasar Raya Nusantara">Sarasa</abbr></a
+            >
+          </li>
           <li class="navitem-edukasi">
-            <a href="./edukasi.html">Edukasi</a>
+            <a href="/edukasi.html"
+              ><abbr title="Ruang Edukasi Kreasi">Reduksi</abbr></a
+            >
             <ul class="subnav-edukasi">
-              <li><a href="./edukasi.html#webinar">Webinar</a></li>
-              <li><a href="./edukasi.html#workshop" lang="en">Workshop</a></li>
+              <li><a href="/edukasi.html#webinar">Gelar Wicara</a></li>
+              <li><a href="/edukasi.html#workshop" lang="en">Lokakarya</a></li>
             </ul>
           </li>
-          <li><a href="./hiburan.html">Hiburan</a></li>
-          <li><a href="./galeri.html" lang="en">Gallery</a></li>
           <li>
-            <a href="./tanya-jawab.html"
+            <a href="/hiburan.html"
+              ><abbr title="Atraksi Sorai Seni">Atsiri</abbr></a
+            >
+          </li>
+          <li><a href="/galeri.html" lang="en">Gallery</a></li>
+          <li>
+            <a href="/tanya-jawab.html"
               ><abbr lang="en" title="Frequently Asked Questions">FAQ</abbr></a
             >
           </li>
@@ -93,12 +108,25 @@
         </li>
       </ul>
     </header>
-    <div class="fullheight afternav">
-      <h1>Beranda</h1>
+
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide slide-1"><img src="https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2FGroup%2029.svg?v=1632852160673"/></div>
+        <div class="swiper-slide slide-2">Slide 2</div>
+        <div class="swiper-slide slide-3">Slide 3</div>
+
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
     <div class="fullheight spoiler">
-      <h2>3D Expo</h2>
-      <div class="spoiler-ornament"></div>
+      <h2>MAHATMA <br />Kembara Maha Taman</h2>
       <video autoplay muted loop id="myVideo">
         <source
           src="https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2FScreen-Capture-2.m4v?v=1632338623400"
@@ -106,11 +134,11 @@
         />
       </video>
     </div>
-    <div class="fullheight">
-      <h2>Timeline</h2>
-      <img src="./assets/image.png" style="width: 100vw height: auto" alt="" />
+    <div class="fullheight linimasa">
+      <h2>Lini Masa Acara</h2>
+      <img class="timeline" src="https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2FAsset%2045.png?v=1632988317616" alt="" />
     </div>
-    <div class="fullheight">
+    <div class="fullheight sponsor">
       <h2>Sponsor</h2>
       <ul class="sponsor-list">
         <li>
@@ -156,8 +184,10 @@
         <div class="company-identity">
           <img src="./assets/logo.png" width="50px" height="50px" alt="logo" />
           <p>
-            Nunc quis posuere leo, vitae tincidunt felis. Mauris interdum
-            tincidunt convallis. Aliquam lacinia nunc diam.
+            FORESTECH Fakultas Kehutanan UGM<br />
+            Jl. Agro nomor 1, Bulaksumur, Depok, Sleman,<br />
+            Daerah Istimewa Yogyakarta 55281<br />
+            forestech.fktugm@gmail.com
           </p>
         </div>
         <div class="right-container">
@@ -196,14 +226,6 @@
                 ></a>
               </li>
             </ul>
-          </div>
-          <div class="plant">
-            <img
-              src="https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2Ffooter%202.png?v=1631787827350"
-              width="50px"
-              height="50px"
-              alt="logo"
-            />
           </div>
         </div>
       </div>

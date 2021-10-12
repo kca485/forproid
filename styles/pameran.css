@@ -2,6 +2,10 @@ html, body {
   width: 100%;
 }
 
+#loading-screen h2{
+  padding-top:10vw;
+}
+
 .loading {
   position: absolute;
   top: 0;

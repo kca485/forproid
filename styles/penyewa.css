@@ -15,9 +15,17 @@ h1, h2 {
   font-size: 32px;
 }
 
+p {
+  line-height:150%;
+}
+
 div.tenant {
   min-height: calc(100vh - 65px);
   background-image: url('../assets/bg-opsi-3-kecil-trnsprn.png');
+}
+
+div.tenant div.center {
+  margin-bottom: 2rem;
 }
 
 div.tenant .tenant-info {
@@ -29,14 +37,23 @@ div.products {
   background-image: url('../assets/bg-opsi-3-kecil-trnsprn.png');
 }
 
+div.center {
+  display: flex;
+}
+
 div.products .products-images,
-div.products .products-info{
+div.products .products-info {
   max-width: 350px;
+  margin: 2rem;
 }
 
 div.tenant .tenant-info,
 div.products .products-info {
-  padding-bottom: 10%;
+  padding-bottom: 15%;
+}
+
+div.links a {
+  text-decoration: none;
 }
 
 div#image-list {
@@ -49,24 +66,43 @@ div#image-list input[type="radio"] {
   height: 0;
 }
 
-div.image-chosen {
+div#image-chosen {
   height: 350px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-div.product {
+div#image-list img {
+  display: block;
+  border: solid #013832 1px;
+}
+
+div#image-list img.current {
+  border-color: #b85e39;
+  border-radius: 50%;
+}
+
+div#info-produk01,
+div#info-produk02,
+div#info-produk03,
+div#info-produk04,
+div#info-produk05 {
   display: none;
 }
 
 @media  screen and (max-width: 768px) {
   div.tenant,
-  div.products {
+  div.products,
+  div.center {
     flex-direction: column;
   }
 
-  h1, h2,  {
+  h1, h2 {
+    text-align: center;
+  }
+
+  div.links {
     text-align: center;
   }
 }

@@ -1,20 +1,35 @@
 div.tentang {
-  min-height: 100vh;
-  background-color: #25133a;
+  min-height: calc(100vh - 65px);
   color: #ffffff;
   display: flex;
   align-items: center;
+  justify-content: center;
+  background-image:url('https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2Fabout.png?v=1632851525498');
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  background-size:cover;
 }
 
-div.tentang .forpro-image {
+div.tentang main {
+  max-width: 750px;
+  margin: 1.8rem 0 6rem 20%;
+}
+
+div.tentang main .forpro-image {
   text-align: right;
+}
+
+div.tentang main p {
+  margin-right: 100px;
 }
 
 h1 {
   font-size: 72px;
   font-weight: normal;
   line-height: 1.15;
-  margin: 0;
+  margin: 4rem 0 2rem 0;
+  text-align: left;
+  text-transform: none;
 }
 
 h2 {
@@ -22,8 +37,31 @@ h2 {
   color: #013832;
 }
 
+@media  screen and (max-width: 1024px) {
+  div.tentang main {
+    margin: 6rem 0;
+  }
+
+  div.tentang main p {
+    margin-right: 0;
+  }
+}
+
 @media  screen and (max-width: 480px) {
   h1 {
     font-size: 56px;
   }
+}
+
+section {
+  height:calc(100vh);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  column-gap:30px;
+}
+
+section h2 {
+  width:100%;
+  padding-top:50px;
 }
