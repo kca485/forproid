@@ -63,6 +63,10 @@ ul.produk-list a{
     grid-template-columns: 1fr;
   }
 
+  div.hero {
+    padding: 0 4rem;
+  }
+
   div.hero h1 {
     margin: 0;
     text-align: center;
