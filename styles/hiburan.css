@@ -3,13 +3,10 @@ div.overlay {
   width: calc(100vw - 12px);
   top: 200px;
   text-align: center;
-  font-size: 2rem;
 }
 
-#hiburan h1 {
-  position:absolute;
-  width:calc(100vw - 12px);
-  top:200px;
+div.overlay {
+  font-size: 2rem;
 }
 
 iframe {
