@@ -37,6 +37,19 @@ h2 {
   color: #013832;
 }
 
+section {
+  min-height:calc(100vh);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  column-gap:30px;
+}
+
+section h2 {
+  width:100%;
+  padding-top:50px;
+}
+
 @media  screen and (max-width: 1024px) {
   div.tentang main {
     margin: 6rem 0;
@@ -51,17 +64,4 @@ h2 {
   h1 {
     font-size: 56px;
   }
-}
-
-section {
-  height:calc(100vh);
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  column-gap:30px;
-}
-
-section h2 {
-  width:100%;
-  padding-top:50px;
 }
