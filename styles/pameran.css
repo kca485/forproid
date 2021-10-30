@@ -132,6 +132,14 @@ html, body {
   -o-transition: background-color .3s ease-out;
 }
 
+.ke-pasar.web{
+  background-color:#fb8500;  
+  transition: background-color .3s ease-out;
+  -moz-transition: background-color .3s ease-out;
+  -webkit-transition: background-color .3s ease-out;
+  -o-transition: background-color .3s ease-out;
+}
+
 .ke-pasar.ig{
   background-color:#843b62;  
   transition: background-color .3s ease-out;
@@ -156,6 +164,14 @@ html, body {
   -o-transition: background-color .3s ease-out;
 }
 
+.ke-pasar.web:hover{
+  background-color:#e85d04;  
+  transition: background-color .3s ease-out;
+  -moz-transition: background-color .3s ease-out;
+  -webkit-transition: background-color .3s ease-out;
+  -o-transition: background-color .3s ease-out;
+}
+
 .ke-pasar.ig:hover{
   background-color:#4e148c;  
   transition: background-color .3s ease-out;
@@ -173,47 +189,62 @@ html, body {
 }
 
 .kios:before{
-      font-family: "Font Awesome 5 Free";
-    speak: none;
-    font-style: normal;
-    font-weight: 900;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: white;
-    content: "\f54e";
-    font-size: 19px;
+  font-family: "Font Awesome 5 Free";
+  speak: none;
+  font-style: normal;
+  font-weight: 900;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: white;
+  content: "\f54e";
+  font-size: 19px;
+  margin-left:24px;
+}
+
+.web:before {
+  font-family: "Font Awesome 5 Free";
+  speak: none;
+  font-style: normal;
+  font-weight: 900;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: white;
+  content: "\f0ac";
+  font-size: 19px;
   margin-left:24px;
 }
 
 .ig:before{
-      font-family: "Font Awesome 5 Brands";
-    speak: none;
-    font-style: normal;
-    font-weight: 900;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: white;
-    content: "\f16d";
-    font-size: 19px;
+  font-family: "Font Awesome 5 Brands";
+  speak: none;
+  font-style: normal;
+  font-weight: 900;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: white;
+  content: "\f16d";
+  font-size: 19px;
   margin-left:28px;
 }
 
 .fb:before{
-      font-family: "Font Awesome 5 Brands";
-    speak: none;
-    font-style: normal;
-    font-weight: 900;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: white;
-    content: "\f09a";
-    font-size: 19px;
+  font-family: "Font Awesome 5 Brands";
+  speak: none;
+  font-style: normal;
+  font-weight: 900;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: white;
+  content: "\f09a";
+  font-size: 19px;
   margin-left:28px;
 }
 

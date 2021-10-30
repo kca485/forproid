@@ -1,3 +1,25 @@
+// video player
+
+const ytScriptTag = document.createElement('script');
+ytScriptTag.src = 'https://www.youtube.com/iframe_api';
+const firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(ytScriptTag, firstScriptTag);
+
+let player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('atsiri');
+}
+
+const playButton = document.getElementById('play-button');
+const overlay = document.querySelector('.overlay');
+playButton.addEventListener('click', function() {
+  overlay.style.display = 'none';
+  player.playVideo();
+});
+
+
+// countdown
+
 function CountDown(targetDate) {
   this._targetTime = targetDate.getTime();
 }
@@ -79,7 +101,7 @@ CountDown.prototype.hasPassed = function() {
   }
 };
 
-const targetDate = new Date('8 November 2021 10:00 UTC+07:00');
+const targetDate = new Date('14 November 2021 19:00 UTC+07:00');
 const countDown = new CountDown(targetDate);
 countDown.setSecondsElement('seconds');
 countDown.setMinutesElement('minutes');

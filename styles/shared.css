@@ -20,6 +20,10 @@ h5 {
   -webkit-font-smoothing: antialiased;
 }
 
+body {
+  background-color: #ffffff;
+}
+
 h1 {
   font-family: 'Prata', serif;
   text-align:center;
@@ -49,6 +53,14 @@ abbr[title] {
   text-decoration: none;
 }
 
+
+/* */
+
+div.wait-screen {
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 9999;
+}
 
 /* HEADER */
 

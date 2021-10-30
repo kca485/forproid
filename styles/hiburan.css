@@ -1,12 +1,15 @@
 div.overlay {
   position: absolute;
-  width: calc(100vw - 12px);
-  top: 200px;
-  text-align: center;
-}
-
-div.overlay {
+  width: 100%;
+  height: calc(100vh - 65px);
+  top: 65px;
   font-size: 2rem;
+  text-align: center;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 1)),
+    url(https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2FSlider3.png?v=1632851700335);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 iframe {

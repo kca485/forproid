@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="./styles/hiburan.css" />
   </head>
   <body id="hiburan">
+    <div class="wait-screen" style="height: 100vh; width: 100%"></div>
     <header>
       <a href="./" class="header-item header-logo">
         <img
@@ -74,7 +75,7 @@
       </nav>
       <ul class="header-item socmed">
         <li>
-          <a href="https://www.youtube.com"
+          <a href="https://www.youtube.com/channel/UCvToYsuGYNiyrujZtKbVJ9w"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -90,7 +91,7 @@
           ></a>
         </li>
         <li>
-          <a href="https://www.instagram.com"
+          <a href="https://www.instagram.com/eventforestech/"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -110,16 +111,18 @@
     <div class="overlay">
       <h1>Hiburan</h1>
       <p>Atsiri : Atraksi Sorai Seni</p>
-      <p>4 November 2021, 19.00 WIB</p>
+      <p><time datetime="2021-11-14T19:00:00+07:00">14 November 2021, 19.00 WIB</time></p>
+      <button id="play-button">play</button>
     </div>
     <iframe
+      id="atsiri"
       width="560"
       height="315"
-      src="https://www.youtube-nocookie.com/embed/NpEaa2P7qZI"
-      title="YouTube video player"
+      src="https://www.youtube-nocookie.com/embed/1I1JhgOPlu0?enablejsapi=1"
+      title="Atraksi Sorai Seni"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscree
+      allowfullscreen
     >
     </iframe>
     <section class="countdown-section">
@@ -145,7 +148,7 @@
     <footer>
       <div class="footer-container">
         <div class="company-identity">
-          <img src="./assets/logo.png" width="50px" height="50px" alt="logo" />
+          <img src="./assets/logo-forpro.png" height="40px" alt="logo" />
           <p>
             FORESTECH Fakultas Kehutanan UGM<br />
             Jl. Agro nomor 1, Bulaksumur, Depok, Sleman,<br />
@@ -157,7 +160,7 @@
           <div class="socmed-container">
             <ul class="socmed">
               <li>
-                <a href="https://www.youtube.com"
+                <a href="https://www.youtube.com/channel/UCvToYsuGYNiyrujZtKbVJ9w"
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -173,7 +176,7 @@
                 ></a>
               </li>
               <li>
-                <a href="https://www.instagram.com"
+                <a href="https://www.instagram.com/eventforestech/"
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -197,6 +200,6 @@
       </div>
     </footer>
     <script type="module" src="./scripts/shared.js"></script>
-    <script type="module" src="./scripts/hiburan.js"></script>
+    <script src="./scripts/hiburan.js"></script>
   </body>
 </html>

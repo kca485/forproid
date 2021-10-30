@@ -41,14 +41,10 @@ div.container {
   justify-content: center;
 }
 
-div.container .left,
-div.container .right {
-  width: 350px;
-}
-
 div.container .left {
   display: flex;
   justify-content: center;
+  max-height: 600px;
 }
 
 div.container .left img {
@@ -57,6 +53,17 @@ div.container .left img {
 
 div.container .right {
   margin-bottom: 6rem;
+}
+
+div.container .left, div.container .right{
+  width:35vw;
+  min-width:300px;
+}
+
+.left img{
+  height:auto;
+  width:auto;
+  border-radius:1rem;
 }
 
 a.form-link {
@@ -75,7 +82,7 @@ a.form-link {
   line-height:150%;
 }
 
-@media  screen and (max-width: 768px) {
+@media  screen and (max-width: 1280px) {
   h2 {
     margin-bottom: 2.5rem;
   }
