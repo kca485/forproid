@@ -3,6 +3,10 @@ header {
   z-index: 2;
 }
 
+.slide-1 img{
+  max-width:50vw;
+}
+
 .swiper {
   margin-top:-65px;
   height:calc(100vh - 10px);
@@ -87,14 +91,15 @@ header {
   color:#fffb46;
 }
 
-.fullheight.sponsor{
+.sponsor {
   background-color:#f4f1de;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 100vh;
 }
 
-.fullheight.sponsor h2 {
+.sponsor h2 {
   padding-bottom:30px;
 }
 
@@ -127,7 +132,7 @@ img.timeline {
 }
 
 .fullheight.linimasa {
-  width:calc(100vw - 10px);
+  width:100%;
   height:calc(120vh);
   display:flex;
   flex-wrap:wrap;
@@ -135,10 +140,43 @@ img.timeline {
 }
 
 .fullheight.spoiler h2 {
-    font-family: "Noto Sans Display", sans-serif;
+  font-family: "Noto Sans Display", sans-serif;
   font-weight:bolder;
   font-style:italic;
   letter-spacing:normal;
+}
+
+.spoiler a{
+  color:#ffba08;
+  text-decoration:none;
+  font-weight:900;
+  transition:color .5s;
+}
+
+.spoiler a:hover{
+  color:#dc2f02;
+  transition:color .3s;
+}
+
+.sponsor-list li img {
+  max-width:400px;
+  width:auto;
+  max-height:70px;
+  padding:1.5rem;
+  margin:auto;
+}
+
+img.logo-sponsor-sawit {
+  height:30px;
+  width:auto;
+  max-width:200px;
+}
+
+.sponsor-list li {
+  text-align:center;
+  vertical-align:middle;
+  min-height:100px;
+  display:flex;
 }
 
 @media  screen and (min-width: 1025px) {

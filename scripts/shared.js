@@ -35,3 +35,14 @@ window.onresize = function() {
 const currentPath = window.location.pathname;
 const currentPageLink = document.querySelector('.mainnav a[href="' + currentPath + '"]');
 if (currentPageLink) currentPageLink.style.color = '#b85e39';
+
+// wait screen
+
+const waitScreen = document.querySelector('.wait-screen');
+window.onload = function(e) {
+  waitScreen.style.opacity = 0;
+  waitScreen.style.transition = 'opacity 1.5s'
+  setTimeout(() => {
+    waitScreen.style.display = 'none';
+  }, 1500);
+};
