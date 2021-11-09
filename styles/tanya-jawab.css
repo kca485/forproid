@@ -33,21 +33,46 @@ dl.faq dt button {
   width: 100%;
   text-align: left;
   background-color: #cedbe0;
-  background-image: url(../assets/plus.svg);
-  background-repeat: no-repeat;
-  background-position: left 1rem center;
   border: none;
-  padding: 1em 4rem;
+  padding: 1em 4rem 1rem 1rem;
   line-height: 150%;
+  display: flex;
+  align-items: center;
+  transition: background-color .5s;
+}
+
+dl.faq dt button:before {
+  content:"\f067";
+  font-weight:bold;
+  font-size:24px;
+  padding:10px;
+  display:inline-block;
+  margin:0;
+  transition:transform .5s ease-in-out, color .25s;
+  font-family:"Font Awesome 5 Free";
+}
+
+dl.faq dt button.close-icon {
+  background-color: #faedcd;
+  transition: background-color .5s;
+}
+
+dl.faq dt button.close-icon:before {
+  color:red;
+  transform: rotate(135deg);
+  transition:transform .5s ease-in-out, color .25s;
 }
 
 dl.faq dd {
   margin: 0;
-  padding: 0 4rem;
+  padding: 0 3.5rem;
 }
 
 dl.faq .answer {
-  display: none;
+  visibility: hidden;
+  overflow: hidden;
+  height: 0px;
+  transition: height 0.5s, visibility 0.5s;
 }
 
 @media  screen and (max-width: 480px) {
@@ -55,13 +80,15 @@ dl.faq .answer {
     font-size: 56px;
   }
 
-  dl.faq dt button {
-    background-image: url(../assets/plus.svg);
-    background-position: bottom 1rem center;
-    padding: 2rem 1em 3rem 1em;
-  }
-
   dl.faq dd {
     padding: 0 1rem;
+  }
+}
+
+
+@media  screen and (max-width: 640px){
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }

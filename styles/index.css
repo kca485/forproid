@@ -7,9 +7,19 @@ header {
   max-width:50vw;
 }
 
+.slide-3 img{
+  width:85vw;
+  height:auto;
+  object-fit:contain;
+  transform:translate(-50%, -50%);
+  top:50%;
+  left:50%;
+  position:absolute;
+}
+
 .swiper {
   margin-top:-65px;
-  height:calc(100vh - 10px);
+  height:calc(100vh);
 }
 
 .swiper-slide {
@@ -27,7 +37,7 @@ header {
 }
 
 .swiper-slide.slide-2 {
-  background-image:url('https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2FSlider3.png?v=1632851700335');
+  background-image:url('https://cdn.glitch.me/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2FSlider3.png');
   /* background-attachment:fixed; */
   background-repeat:no-repeat;
   background-size:cover;
@@ -40,12 +50,135 @@ header {
   background-size:cover;
 }
 
+.swiper-slide.slide-4 {
+  background-image:url('https://cdn.glitch.me/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2F8a%20-%20FERGI%20ESMOD.jpg?v=1636212371390');
+  /* background-attachment:fixed; */
+  background-repeat:no-repeat;
+  background-size:cover;
+  flex-wrap:wrap;
+}
+
+.swiper-slide.slide-5 {
+  background-image:url('https://cdn.glitch.me/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2FFrame%208.png?v=1636250295076');
+/*   background-attachment:fixed; */
+  background-repeat:no-repeat;
+  background-size:cover;
+  flex-wrap:wrap;
+}
+
+.swiper-slide.slide-6 {
+  background-image:url('https://cdn.glitch.me/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2F01.PNG?v=1636015063206');
+  /* background-attachment:fixed; */
+  background-repeat:no-repeat;
+  background-size:cover;
+  flex-wrap:wrap;
+}
+
+.slide-4 div.container-brand, .slide-5 div.container-brand, .slide-6 div.container-brand {
+  border-radius:10rem;
+  background-color:#fff;
+  height:200px;
+  width:200px;
+  margin:1rem;
+  overflow:hidden;
+  position:relative;
+  padding:1rem;
+}
+
+div.container-brand a{
+  width:100%;
+  height:100%;
+  margin:auto;
+}
+
+a.slide-brand-01, a.slide-brand-02, a.slide-brand-03 {
+  text-align:center;
+  background-size:contain;
+  background-repeat:no-repeat; 
+  background-position:center;
+  vertical-align:middle;
+  display:inline-block;
+  text-decoration:none;
+  color:#fff;  
+}
+
+.slide-4 p, .slide-5 p, .slide-6 p{
+  color:#fff;
+  font-size:24px;
+  backdrop-filter:blur(7px);
+  text-align:center;
+  width:70vw;
+  padding:2rem;
+  border-radius:2rem;
+  line-height:130%;
+  background: linear-gradient(217deg, rgb(203, 153, 126, .5), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgb(127, 85, 57,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgb(51, 61, 41,.8), rgba(0,0,255,0) 70.71%);
+}
+
+.brand {
+  width:90vw;
+  margin:1rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+
+a.slide-brand-01 {
+  background-image:url('https://pring.id/wp-content/uploads/2021/06/pring-logo-h-1024x594.png');
+}
+
+a.slide-brand-02 {
+  background-image:url('https://cdn.glitch.me/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2FYOJANA%20LOGO%20-%20FERGI%20ESMOD.jpg');
+}
+
+a.slide-brand-03 {
+  background-image:url('https://cdn.glitch.me/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2Flogo2%20160-01%20-%20Celia%20Bun%20Irawan.png?v=1635670048429');
+}
+
+.slide-3 .slide-atsiri{
+  background-image:url('https://cdn.glitch.me/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2Fbg%20konser%201.png?v=1636170892161');
+  background-size:cover;
+  background-repeat:no-repeat;
+  height:100%;
+  width:100%;
+}
+
+a.slide-lokakarya, a.slide-gelarwicara{
+  width:450px;
+  height:70%;
+  padding-left:1rem;
+  padding-right:1rem;
+  text-align:center;
+  background-size:contain;
+  background-repeat:no-repeat;  
+  background-position:center;
+  vertical-align:middle;
+  display:inline-block;
+  text-decoration:none;
+  color:#fff;
+}
+
+
+a.slide-lokakarya {
+    background-image:url('https://cdn.glitch.me/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2FFrame%207%20(1).png'); 
+
+}
+
+a.slide-gelarwicara{
+    background-image:url('https://cdn.glitch.me/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2FFrame%206%20(1).png');
+  
+}
+
 .fullheight {
   height: 100vh;
 }
 
 .fullheight h2 {
   margin: 0;
+  color:#590d22;
 }
 
 .fullheight.afternav {
@@ -67,11 +200,6 @@ header {
   align-items:center;
   position:relative;
   overflow: hidden;
-}
-
-.fullheight.spoiler h2 {
-  font-family:'DM Serif Display';
-  font-weight:normal;
 }
 
 #myVideo {
@@ -101,6 +229,7 @@ header {
 
 .sponsor h2 {
   padding-bottom:30px;
+  color:#590d22;
 }
 
 ul.sponsor-list {
@@ -135,6 +264,7 @@ img.timeline {
   width:100%;
   height:calc(120vh);
   display:flex;
+  flex-direction:column;
   flex-wrap:wrap;
   justify-content:center;
 }
@@ -147,14 +277,14 @@ img.timeline {
 }
 
 .spoiler a{
-  color:#ffba08;
+  color:#fff;
   text-decoration:none;
   font-weight:900;
   transition:color .5s;
 }
 
 .spoiler a:hover{
-  color:#dc2f02;
+  color:#ffba08;
   transition:color .3s;
 }
 
@@ -179,6 +309,24 @@ img.logo-sponsor-sawit {
   display:flex;
 }
 
+.spoiler h2 {
+  background-image: linear-gradient(to right, rgba(0, 75, 35, 0), rgba(0, 75, 35, 0), rgba(0, 75, 35, 0.8), rgba(0, 75, 35, 1),rgba(0, 75, 35, 0.8), rgba(0, 75, 35, 0), rgba(0, 75, 35, 0));
+  border-radius:1rem;
+  width:50vw;
+  backdrop-filter:blur(15px);
+  padding:.8rem 1.5rem 1.5rem 1.5rem;
+  line-height:80%;
+  min-width:400px;
+}
+
+div.spoiler a sub{
+  font-family: 'Prata', serif!important;
+  font-weight:normal;
+  font-style:normal;
+  font-size:2.4rem;
+  letter-spacing:.5px;
+}
+
 @media  screen and (min-width: 1025px) {
   ul.subnav-edukasi {
       background-color: transparent;
@@ -188,5 +336,51 @@ img.logo-sponsor-sawit {
 @media  screen and (max-width: 480px) {
   .spoiler h2 {
     font-size: 48px;
+  }
+}
+
+@media  screen and (max-width: 640px){
+  
+  div.hero {
+    padding:0px 1rem;
+  }
+  div.hero h1{
+    padding-top:8rem!important;
+    text-align:center!important;
+    width:100%;
+  }
+  
+  div.spoiler a sub {
+    font-size:1.5rem;
+  }
+  div.slide-1 img{
+    position:absolute;
+    top:15vh;
+    width:100%;
+    right:10vw;
+  }
+  .sponsor-list li img{
+    max-width:90vw;
+  }
+  .fullheight.linimasa{
+    flex-wrap:nowrap;
+    height:60vh;
+  }
+  .slide-4 p, .slide-5 p, .slide-6 p{
+    font-size: 1rem;
+    line-height: 150%;
+    padding: 1.5rem 1rem;
+  }
+  .slide-2{
+  flex-direction:column;
+  }
+  a.slide-lokakarya, a.slide-gelarwicara{
+    height:35%;
+    padding-top:1rem;
+    padding-bottom:1rem;
+  }
+  
+  .slide-2 a.slide-lokakarya {
+    margin-top:3rem;
   }
 }

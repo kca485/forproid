@@ -1,3 +1,7 @@
+#galeri h1{
+  text-transform:lowercase;
+}
+
 main {
   display: flex;
   flex-direction: column;

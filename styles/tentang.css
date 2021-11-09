@@ -1,3 +1,15 @@
+ul.subnav-edukasi {
+  background-color:transparent;
+}
+
+div.tentang{
+  margin-top:-65px;
+}
+
+header ul.socmed a{
+  background-color:#ffba08;
+}
+
 div.tentang {
   min-height: calc(100vh - 65px);
   color: #ffffff;
@@ -27,7 +39,7 @@ h1 {
   font-size: 72px;
   font-weight: normal;
   line-height: 1.15;
-  margin: 4rem 0 2rem 0;
+  margin: 8rem 0 2rem 0;
   text-align: left;
   text-transform: none;
 }
@@ -69,9 +81,27 @@ div.foto img {
   }
 }
 
+@media  screen and (min-width: 1025px) {
+  header ul.mainnav a{
+    color:#fff;
+  }
+}
+
 @media  screen and (max-width: 1024px) {
+  .menu-button svg path:nth-child(2) {
+    fill: #ffba08;
+  }
+
+  div.tentang {
+    align-items: start;
+  }
+
   div.tentang main {
     margin: 6rem 0;
+  }
+
+  div.tentang main h1 {
+    margin-top: 2rem;
   }
 
   div.tentang main p {
@@ -86,6 +116,22 @@ div.foto img {
 @media  screen and (max-width: 640px) {
   div.galeri {
     grid-template-columns: 1fr;
+  }
+  
+  div.tentang main{
+    padding:0px 1rem;
+  }
+  
+  .tentang h1{
+    text-align:center;
+  }
+  
+  div.tentang p{
+    padding:1rem;
+    background-image:linear-gradient(to right, rgba(37, 19, 57, .8), rgba(37, 19, 57, .8));
+    backdrop-filter:blur(8px);
+    border-radius:1rem;
+    color:#fefae0;
   }
 }
 

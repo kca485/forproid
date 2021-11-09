@@ -14,9 +14,27 @@ div.hero {
   background-size:cover;
 }
 
+div.hero {
+  margin-top:-65px;
+  min-height:100vh;
+}
+
+ul.subnav-edukasi {
+  background-color:transparent;
+}
+
+div.hero h1 {
+  padding-top:10rem!important;
+}
+
+div.hero p, div.hero h1 {
+  margin-left:20rem;
+  width:35vw;
+}
+
 div.hero h1 {
   padding: 3rem 0 0 0;
-  margin: 0 auto 0 15rem;
+  margin: 0 auto 0 20rem;
   text-align:left;
   line-height:150%;
   color:#023047;
@@ -25,8 +43,6 @@ div.hero h1 {
 }
 
 div.hero p {
-  width:40vw;
-  margin-left:15rem;
   margin-right:auto;
   line-height:150%;
 }
@@ -41,20 +57,64 @@ h2 {
 
 ul.produk-list {
   padding: 0;
-  display: inline-grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 1rem;
+}
+
+.pasar ul.produk-list {
+  display:flex;
+  margin-left:auto;
+  margin-right:auto;
+  width:60vw;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.pasar ul.produk-list li {
+  margin:.5rem;
 }
 
 ul.produk-list a {
   display: flex;
 }
 
-@media  screen and (max-width: 851px) {
-  ul.produk-list {
-    grid-template-columns: 1fr;
-  }
+ul.produk-list li img{
+  object-fit:contain;
+  background-color:#fff;
+  padding:.8rem;
+  transition:background-color 2.5s;
+}
 
+ul.produk-list li img:hover{
+  object-fit:contain;
+  background-color:#a4133c;
+  padding:.8rem;
+  transition:background-color .3s;
+}
+
+
+ul.produk-list img:hover{
+  transform:scale(1.02);
+  transition:transform 5s ease-in-out;
+}
+
+ul.produk-list img{
+  transform:scale(1);
+  transition:transform 2s ease-in-out;
+}
+
+
+div.hero p, div.hero h1{
+x
+}
+
+footer {
+  margin-top:10rem;
+}
+
+h2 {
+  color:#590d22;
+}
+
+@media  screen and (max-width: 851px) {
   div.hero {
     padding: 0 4rem;
   }
@@ -68,6 +128,26 @@ ul.produk-list a {
     margin: 1em auto;
     width: unset;
     text-align: center;
+  }
+  
+  div.hero p {
+    text-align:left;
+    background-image:linear-gradient(to right, rgba(239,233,97,.8), rgba(239,233,97,.8));
+    padding:1rem;
+    border-radius:1rem;
+    backdrop-filter:blur(10px);
+  }
+
+}
+
+@media  screen and (max-width: 640px){
+  div.hero {
+    padding:0px 1rem;
+  }
+  div.hero h1{
+    padding-top:8rem!important;
+    text-align:center!important;
+    width:100%;
   }
 }
 

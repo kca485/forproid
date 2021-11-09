@@ -20,6 +20,8 @@ controls.maxPolarAngle = Math.PI / 2.2;
 controls.autoRotate = true;
 controls.autoRotateSpeed = 0.2;
 controls.enableDamping = true;
+controls.minDistance = 5;
+controls.maxDistance = 50;
 
 renderer.toneMapping = THREE.ReinhardToneMapping;
 renderer.toneMappingExposure = 0.7;
@@ -87,7 +89,7 @@ loader.load('../assets/model/packed.glb', function(gltf) {
         intersected = intersects[0].object;
         intersected.originalHex = intersected.material.emissive.getHex();
 
-        if (intersected.name.startsWith('Booth')) {
+        if (intersected.name.startsWith('Booth') || intersected.name === 'Panggung') {
           intersected.material = intersected.material.clone();
           intersected.material.emissiveIntensity = 0.7;
           intersected.material.emissive.setHex(0xffffff);
@@ -128,8 +130,16 @@ function onMouseMove() {
 }
 window.addEventListener('mousemove', onMouseMove);
 
-// ngurusi munculin/sembunyiin tenant-modal
-let modalShown = null;
+
+// ngurusi munculin/sembunyiin modal
+const introModal = document.querySelector('.intro.modal');
+const introCloseButton = document.querySelector('.intro .close-button');
+let modalShown = introModal;
+introCloseButton.addEventListener('click', function() {
+  introModal.style.display = 'none';
+  modalShown = null;
+});
+
 function onMouseClick(event) {
   mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
   mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
@@ -144,6 +154,9 @@ function onMouseClick(event) {
       tenantModal.style.display = 'block';
       modalShown = tenantModal;
       return;
+    }
+    if (objectName === 'Panggung') {
+      location = 'https://forpro.id/hiburan.html';
     }
   }
   if (modalShown) {

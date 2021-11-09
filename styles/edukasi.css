@@ -1,3 +1,13 @@
+ul.subnav-edukasi {
+  background-color:transparent;
+}
+
+div.right a{
+  margin-right:auto;
+  margin-left:0;
+  margin-top:2rem;
+}
+
 h2, h3 {
   margin: 0;
 }
@@ -36,6 +46,25 @@ article#workshop  h3 {
   color: #013832;
 }
 
+header {
+  background-color:#50c5b7;
+}
+
+body{
+  background-color:#50c5b7;
+}
+
+article#workshop {
+  background-color:#fff;
+  padding-top:30vh;
+  padding-bottom:10vh;
+}
+
+article#workshop h2{
+  background-color:#fff;
+  margin-top:0;
+}
+
 div.container {
   display: flex;
   justify-content: center;
@@ -51,8 +80,9 @@ div.container .left img {
   margin: 2.5rem 0;
 }
 
-div.container .right {
+div.container div.right {
   margin-bottom: 6rem;
+  width:30vw;
 }
 
 div.container .left, div.container .right{
@@ -60,11 +90,6 @@ div.container .left, div.container .right{
   min-width:300px;
 }
 
-.left img{
-  height:auto;
-  width:auto;
-  border-radius:1rem;
-}
 
 a.form-link {
   text-decoration: none;
@@ -73,7 +98,6 @@ a.form-link {
   font-size: 1.5rem;
   display: inline-block;
   padding: 0.5rem 1rem;
-  margin-top: 1rem;
   border-radius: 10px;
   display: inline-block;
 }
@@ -81,6 +105,48 @@ a.form-link {
 #webinar p, #webinar h3, #workshop p, #webinar h3{
   line-height:150%;
 }
+
+div.container .left img{
+  width:auto;
+  height:70vh;
+  margin-top:0px;
+  border-radius:1rem;
+}
+
+.right .form-link {
+  font-size:1.2rem;
+  border:solid .1rem #001845;
+  color:#001845;
+  background-color:transparent;
+  border-radius:5rem;
+  padding:.5rem 1.5rem;
+  transition:background-color .3s, color .3s, border .3s, flex-direction 3s;
+  width:90px;
+  display:flex;
+  flex-direction:row;
+}
+
+.right .form-link:after {
+  content: "\f2f6";
+  padding-left: .5rem;
+  margin-right:-2px;
+  font-weight: 900;  
+  font-style: normal;
+  font-family: "Font Awesome 5 Free";
+  transition:padding-left .3s ease-in-out;
+}
+
+.right .form-link:hover:after {
+  padding-left: 1rem;
+  margin-right:-2px;
+  transition:padding-left .3s ease-in-out;
+}
+
+.right .form-link:hover {
+  background-color:#9d0208;
+  color:#fff;
+  border:solid .1rem transparent;
+  transition:background-color .3s, color .3s, border .3s;}
 
 @media  screen and (max-width: 1280px) {
   h2 {
@@ -101,5 +167,20 @@ a.form-link {
 @media  screen and (max-width: 480px) {
   h2 {
     font-size: 56px;
+  }
+}
+
+@media screen and (max-width:1280px){
+  div.right a{
+    margin:0px auto;
+  }
+  
+  article#workshop {
+    padding-top:15vh;
+  }
+  
+  #webinar div.container .right a{
+    margin-right:0px;
+    margin-left:auto;
   }
 }

@@ -2,7 +2,7 @@
 <html lang="id">
   <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>FORPRO 2021 | Atsiri</title>
     <meta name="description" content="" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -19,13 +19,24 @@
     <link rel="stylesheet" type="text/css" href="./styles/normalize.css" />
     <link rel="stylesheet" type="text/css" href="./styles/shared.css" />
     <link rel="stylesheet" type="text/css" href="./styles/hiburan.css" />
+    <link
+      rel="stylesheet"
+      href="//use.fontawesome.com/releases/v5.15.0/css/all.css"
+    />
   </head>
   <body id="hiburan">
-    <div class="wait-screen" style="height: 100vh; width: 100%"></div>
+    <div class="wait-screen" style="height: 100vh; width: 100%; background-color:#FBFBFB; background-image:url('https://cdn.glitch.me/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2FComp%201-min%20(1).gif?v=1636206914627'); background-repeat:no-repeat; background-position:center;"></div>
     <header>
       <a href="./" class="header-item header-logo">
         <img
-          src="https://cdn.glitch.com/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2Flogo.png?v=1631789468280"
+          src="https://cdn.glitch.me/9a150b32-f62b-450c-b7ae-0a8489c10e6c%2Flogo.png?v=1635594018690"
+          width="auto"
+          height="40px"
+          alt="logo"
+             style="padding-right:10px;"
+        />
+        <img
+          src="./assets/logo-forpro.png"
           width="auto"
           height="40px"
           alt="logo"
@@ -117,10 +128,12 @@
       </ul>
     </header>
     <div class="overlay">
-      <h1>Hiburan</h1>
-      <p>Atsiri : Atraksi Sorai Seni</p>
-      <p><time datetime="2021-11-14T19:00:00+07:00">14 November 2021, 19.00 WIB</time></p>
-      <button id="play-button">play</button>
+<!--       <h1>Hiburan</h1> -->
+      <div class="atsiri-container">
+        <p>Atsiri : Atraksi Sorai Seni</p>
+        <p><time datetime="2021-11-14T19:00:00+07:00">14 November 2021, 19.00 WIB</time></p>
+      </div>
+      <button id="play-button" title="🎬 putar video"><span class="playcontainer"><span class="playtext">play</span></span></button>
     </div>
     <iframe
       id="atsiri"
