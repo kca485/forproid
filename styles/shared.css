@@ -28,7 +28,7 @@ h1 {
   font-family: 'Prata', serif;
   text-align:center;
   font-size:64px;
-  letter-spacing:13px;
+  letter-spacing:10px;
   text-transform:lowercase;
 }
 
@@ -36,7 +36,7 @@ h2 {
   font-family: 'Prata', serif;
   text-align:center;
   font-size:32px;
-  letter-spacing:10px;
+  letter-spacing:1px;
   text-transform:lowercase;
 }
 
@@ -57,9 +57,10 @@ abbr[title] {
 /* */
 
 div.wait-screen {
-  position: absolute;
+  position: fixed;
   background-color: #ffffff;
   z-index: 9999;
+  background-image:url();
 }
 
 /* HEADER */
@@ -79,13 +80,22 @@ header a {
   text-decoration:none;
 }
 
+.header-item.header-logo, .header-item{
+  padding-top:1rem;
+  z-index:99;
+}
+
+.header-item.socmed {
+  padding-top:1rem;  
+}
+
 header .header-item {
   margin: 1em 0;
 }
 
 header .header-logo {
   display: flex;
-  align-items: center;
+  z-index: 2;
 }
 
 header nav {
@@ -124,13 +134,13 @@ ul.mainnav li {
 ul.subnav-edukasi {
   display: none;
   position:absolute;
-  padding: 40px 0.5em 0 0.5em;
+  padding: 30px 0.5em 0 0.5em;
   background-color: #ffffff;
 }
 
 ul.subnav-edukasi li {
   margin: auto;
-  height: 65px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,6 +160,15 @@ header ul.socmed a {
 
 
 /* HEADER & FOOTER */
+
+header ul.socmed a:hover, footer ul.socmed a:hover{
+  background-color:#e63946;
+  transition:background-color .3s;
+}
+
+header ul.socmed a, footer ul.socmed a{
+  transition:background-color .3s;
+}
 
 ul.socmed {
   display: flex;
@@ -238,9 +257,33 @@ footer .plant img{
 ::-webkit-scrollbar-thumb:hover {
   background: #cc5803;
 }
+.tenant-info p {
+  color:#5c677d;
+}
 
+.products p, .tenant p{
+  color:#5c677d;
+}
+
+#workshop p{
+  color:#5c677d;
+}
+
+#webinar p{
+  color:#2f3e46;
+}
+
+.tentang p{
+  color:#979dac;
+}
 
 /* MEDIA QUERIES */
+
+@media  screen and (min-width: 1025px) {
+  header nav.header-item {
+    padding-top: 2rem;
+  }
+}
 
 @media  screen and (max-width: 1024px) {
   header nav {

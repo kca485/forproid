@@ -1,11 +1,52 @@
+div.products {
+  height:fit-content;
+}
+
+img.tenant-image{
+  object-fit:contain;
+}
+
+div#image-list img.current{
+  border-radius:50%;
+  opacity:1;
+  background-color:#14213d;
+}
+
+div#image-list img.current:hover{
+  background-color:#14213d;
+  transition:background-color .3s;
+}
+
+div#image-list img{
+  opacity:0.3;
+  border:none;
+  border-radius:50%;
+  background-color:#02c39a;
+  padding:.2rem;
+  margin:.2rem;
+  transition:background-color .2s, opacity .2s;
+}
+
+div#image-list img:hover {
+  background-color:#02c39a;
+  opacity:1;
+  transition:background-color .2s, opacity .2s;
+}
+
+.products-info h2{
+  letter-spacing:1px;
+  line-height:125%;
+}
+
 div.tenant,
 div.products {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
+  padding-top:10vh;
 }
 
 h1, h2 {
@@ -13,6 +54,7 @@ h1, h2 {
   text-align: left;
   font-weight: normal;
   font-size: 32px;
+  text-transform: none;
 }
 
 p {
@@ -26,7 +68,9 @@ div.tenant {
 
 div.tenant div.center {
   margin-bottom: 2rem;
+  padding-top:3rem;
 }
+
 
 div.tenant .tenant-info {
   max-width: 350px;
@@ -52,12 +96,17 @@ div.products .products-info {
   padding-bottom: 15%;
 }
 
+div.links {
+  display: flex;
+}
+
 div.links a {
   text-decoration: none;
 }
 
 div#image-list {
   display: flex;
+  justify-content:center;
 }
 
 div#image-list input[type="radio"] {
@@ -68,18 +117,16 @@ div#image-list input[type="radio"] {
 
 div#image-chosen {
   height: 350px;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 div#image-list img {
   display: block;
-  border: solid #013832 1px;
 }
 
 div#image-list img.current {
-  border-color: #b85e39;
   border-radius: 50%;
 }
 
@@ -91,18 +138,57 @@ div#info-produk05 {
   display: none;
 }
 
+.tenant-image {
+  margin-right:5rem;
+}
+
+.tenant-info h1{
+  letter-spacing:4px;
+  line-height:140%;
+  padding-bottom:1rem;
+  font-weight:bold;
+}
+
+.links{
+  padding-top:1rem;
+}
+
+.links a{
+  background-color:#52b69a;
+  margin-right:1rem;
+  padding:.5rem 2rem;
+  border-radius:5rem;
+  color:#fff;
+  transition:background-color .3s;
+}
+
+div.links{
+  padding-bottom:3rem;
+}
+
+.links a:hover{
+  background-color:#14213d;
+  transition:background-color .3s;
+}
+
 @media  screen and (max-width: 768px) {
   div.tenant,
   div.products,
   div.center {
     flex-direction: column;
+    align-items: center;
   }
 
   h1, h2 {
     text-align: center;
   }
 
+  .tenant-image {
+    margin: 0;
+  }
+
   div.links {
-    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 }
