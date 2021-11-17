@@ -290,16 +290,11 @@ img.timeline {
 
 .sponsor-list li img {
   max-width:400px;
-  width:auto;
+  width:100%;
+  height:auto;
   max-height:70px;
   padding:1.5rem;
   margin:auto;
-}
-
-img.logo-sponsor-sawit {
-  height:30px;
-  width:auto;
-  max-width:200px;
 }
 
 .sponsor-list li {
@@ -337,6 +332,9 @@ div.spoiler a sub{
   .spoiler h2 {
     font-size: 48px;
   }
+  ul.sponsor-list {
+    padding: 0;
+  }
 }
 
 @media  screen and (max-width: 640px){
@@ -358,9 +356,6 @@ div.spoiler a sub{
     top:15vh;
     width:100%;
     right:10vw;
-  }
-  .sponsor-list li img{
-    max-width:90vw;
   }
   .fullheight.linimasa{
     flex-wrap:nowrap;
