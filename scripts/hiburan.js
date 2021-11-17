@@ -29,12 +29,6 @@ CountDown.prototype.start = function() {
     const currentTime = Date.now();
     const milisecondsDiff = this._targetTime - currentTime;
 
-    if (milisecondsDiff < 0) {
-      this._hasPassed = true;
-      this.stop();
-      return;
-    };
-
     this._seconds = Math.floor(milisecondsDiff / 1000) % 60;
     this._minutes = Math.floor(milisecondsDiff / (1000 * 60) % 60);
     this._hours = Math.floor(milisecondsDiff / (1000 * 60 * 60) % 24);
@@ -45,9 +39,15 @@ CountDown.prototype.start = function() {
     if (this.hoursElement) updateHoursElement.call(this);
     if (this.daysElement) updateDaysElement.call(this);
 
+    if (milisecondsDiff < 0) {
+      this._hasPassed = true;
+      this.stop();
+    }
   }).bind(this), 1000);
   
   function updateSecondsElement() {
+    if (this._seconds < 0) this._seconds = 0;
+
     let secondsString = '' + this._seconds;
     if (secondsString.length < 2) {
       secondsString = '0' + secondsString
@@ -55,6 +55,8 @@ CountDown.prototype.start = function() {
     this.secondsElement.textContent = secondsString;
   }
   function updateMinutesElement() {
+    if (this._minutes < 0) this._minutes = 0;
+
     let minutesString = '' + this._minutes;
     if (minutesString.length < 2) {
       minutesString = '0' + minutesString
@@ -62,6 +64,8 @@ CountDown.prototype.start = function() {
     this.minutesElement.textContent = minutesString;
   }
   function updateHoursElement() {
+    if (this._hours < 0) this._hours = 0;
+
     let hoursString = '' + this._hours;
     if (hoursString.length < 2) {
       hoursString = '0' + hoursString
@@ -69,7 +73,9 @@ CountDown.prototype.start = function() {
     this.hoursElement.textContent = hoursString;
   }
   function updateDaysElement() {
-    let daysString = '' + this._days;
+    if (this._days < 0) this._days = 0;
+
+    let daysString = '0' + this._days;
     this.daysElement.textContent = daysString;
   }
 };
